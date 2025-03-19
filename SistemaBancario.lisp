@@ -1,9 +1,9 @@
-;;Aluna: Irvna Maria Costa Soares - RGM: 49115
-;;Para Carregar: (load "Diretório da pasta que o arquivo esta localizado")
-;;Exemplo: (load "C:/Users/irvna/OneDrive/Área de Trabalho/UEMS/PP/LISP/TrabalhoLisp.lisp")
+;;Irvna Maria Costa Soares
+;;Para Carregar: (load "DiretÃ³rio da pasta que o arquivo esta localizado")
+;;Exemplo: (load "C:/Users/irvna/OneDrive/Ãrea de Trabalho/UEMS/PP/LISP/TrabalhoLisp.lisp")
 ;;Para executar: (logar)
-;;Para utilizar: Escolha as opções que estão disponiveis no menu através de sua numeração.
-;;Relatórios: Os relatórios são salvo diretamente na pasta de instalação do clisp com o nome composto pelo tipo do relatorio e o CPF do cliente
+;;Para utilizar: Escolha as opÃ§Ãµes que estÃ£o disponiveis no menu atravÃ©s de sua numeraÃ§Ã£o.
+;;RelatÃ³rios: Os relatÃ³rios sÃ£o salvo diretamente na pasta de instalaÃ§Ã£o do clisp com o nome composto pelo tipo do relatorio e o CPF do cliente
 (defstruct aplicacoes
     tipo
     valor-inicial
@@ -45,13 +45,13 @@
 (defun menu-principal ()
     (format t "~%~%----------MENU INICIAL----------~%")
     (format t "1 - Gerenciamento de Clientes e Conta~%")
-    (format t "2 - Gerenciamento de Aplicações Financeiras~%")
-    (format t "3 - Transferências entre Contas~%")
+    (format t "2 - Gerenciamento de AplicaÃ§Ãµes Financeiras~%")
+    (format t "3 - TransferÃªncias entre Contas~%")
     (format t "4 - Pagamentos~%")
-    (format t "5 - Saques e Depósitos~%")
-    (format t "6 - Relatórios Gerenciais~%")
+    (format t "5 - Saques e DepÃ³sitos~%")
+    (format t "6 - RelatÃ³rios Gerenciais~%")
     (format t "7 - Sair~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 )
 
 (defun menu-gerenciamento-cliente ()
@@ -60,67 +60,67 @@
     (format t "2 - Atualizar Cadastro do Cliente~%")
     (format t "3 - Buscar Cliente por CPF~%")
     (format t "4 - Consultar Saldo na Conta~%")
-    (format t "5 - Consultar Histórico da Conta~%")
+    (format t "5 - Consultar HistÃ³rico da Conta~%")
     (format t "6 - Encerrar Conta~%")
     (format t "7 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 ) 
 
 (defun menu-gerenciamento-aplicacoes ()
-    (format t "~%~%----------MENU DE GERENCIAMENTO DE APLICAÇÕES FINANCEIRAS----------~%")
-    (format t "1 - Abrir Poupança~%")
-    (format t "2 - Abrir Título do Governo~%")
+    (format t "~%~%----------MENU DE GERENCIAMENTO DE APLICAÃ‡Ã•ES FINANCEIRAS----------~%")
+    (format t "1 - Abrir PoupanÃ§a~%")
+    (format t "2 - Abrir TÃ­tulo do Governo~%")
     (format t "3 - Abrir Fundo de Investimento~%")
     (format t "4 - Consultar Rendimentos~%")
     (format t "5 - Resgatar Rendimentos~%")
     (format t "6 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 )
 
 (defun menu-gerenciamento-transferencias ()
-    (format t "~%~%----------MENU DE GERENCIAMENTO DE TRANSFERÊNCIAS----------~%")
-    (format t "1 - Transferência entre Contas~%")
-    (format t "2 - Histórico de Tranferências~%")
+    (format t "~%~%----------MENU DE GERENCIAMENTO DE TRANSFERÃŠNCIAS----------~%")
+    (format t "1 - TransferÃªncia entre Contas~%")
+    (format t "2 - HistÃ³rico de TranferÃªncias~%")
     (format t "3 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 )
 
 (defun menu-gerenciamento-pagamentos ()
     (format t "~%~%----------MENU DE PAGAMENTOS----------~%")
     (format t "1 - Realizar Pagamento~%")
-    (format t "2 - Histórico de Pagamentos~%")
+    (format t "2 - HistÃ³rico de Pagamentos~%")
     (format t "3 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 )
 
 (defun menu-gerenciamento-saque-deposito ()
-    (format t "~%~%----------MENU DE SAQUES E DEPÓSITOS----------~%")
+    (format t "~%~%----------MENU DE SAQUES E DEPÃ“SITOS----------~%")
     (format t "1 - Realizar Saque~%")
-    (format t "2 - Histórico de Saques~%")
-    (format t "3 - Realizar Depósito~%")
-    (format t "4 - Histórico de Depósito~%")
+    (format t "2 - HistÃ³rico de Saques~%")
+    (format t "3 - Realizar DepÃ³sito~%")
+    (format t "4 - HistÃ³rico de DepÃ³sito~%")
     (format t "5 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 )
 
 (defun menu-gerenciamento-relatorios-gerais ()
-    (format t "~%~%----------MENU DE RELATÓRIOS GERAIS----------~%")
-    (format t "1 - Gerar Relatório de Transferência~%")
-    (format t "2 - Gerar Relatório de Pagamento~%")
-    (format t "3 - Gerar Relatório de Aplicações Financeiras~%")
-    (format t "4 - Gerar Relatório de Desempenho da Agência~%")
+    (format t "~%~%----------MENU DE RELATÃ“RIOS GERAIS----------~%")
+    (format t "1 - Gerar RelatÃ³rio de TransferÃªncia~%")
+    (format t "2 - Gerar RelatÃ³rio de Pagamento~%")
+    (format t "3 - Gerar RelatÃ³rio de AplicaÃ§Ãµes Financeiras~%")
+    (format t "4 - Gerar RelatÃ³rio de Desempenho da AgÃªncia~%")
     (format t "5 - Voltar para Menu Inicial~%")
-    (format t "Escolha uma opção: ")
+    (format t "Escolha uma opÃ§Ã£o: ")
 );;;fim da escrita de menus
 
-;;esta função verifica se o CPF digitado ja existe no banco de dados
+;;esta funÃ§Ã£o verifica se o CPF digitado ja existe no banco de dados
 (defun verifica-existencia-cpf (cpf-veri)
     (find-if (lambda (cliente)
         (equal (cliente-cpf cliente) cpf-veri)) *clientes*
     )
 )
 
-;;esta função verifica se o numero da conta existe ou não
+;;esta funÃ§Ã£o verifica se o numero da conta existe ou nÃ£o
 (defun verifica-numero (num)
     (find-if (lambda (cliente)
         (when (cliente-conta cliente)
@@ -130,7 +130,7 @@
     )
 )
 
-;;chama a função de gera um numero de 0 a 500 e verificar a existencia do numero, caso não exista salva o numero
+;;chama a funÃ§Ã£o de gera um numero de 0 a 500 e verificar a existencia do numero, caso nÃ£o exista salva o numero
 (defun gerar-numero ()
     (let ((num (random 500)))
         (if (verifica-numero num)
@@ -140,7 +140,7 @@
     )
 )
 
-;;escreve todos os dados necessários dos clientes
+;;escreve todos os dados necessÃ¡rios dos clientes
 (defun escrita-dados-cliente (cliente)
     (format t "~%Dados do Cliente:
                 Nome: ~a 
@@ -148,8 +148,8 @@
                 CPF: ~a
                 Sexo: ~a
                 Data de Nascimento: ~a
-                Endereço: ~a
-                Agência: ~a
+                EndereÃ§o: ~a
+                AgÃªncia: ~a
                 Numero: ~a
                 Estado: ~a
                 Data Abertura: ~a~%"
@@ -171,7 +171,7 @@
     (format t "~%Dados da conta:
                 Nome: ~a ~a
                 CPF: ~a
-                Agência: ~a
+                AgÃªncia: ~a
                 Numero: ~a
                 Estado: ~a
                 Saldo: ~,2f~%"
@@ -187,12 +187,12 @@
 
 ;;escreve todos os dados do historico da conta
 (defun escrita-historico-conta (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a~%"
                 (cliente-nome cliente)
     )
     (dolist (ocorrencia (conta-historico (cliente-conta cliente)))
-        ;;separa a lista em 2, pois a primeira é a data e a segunda ao motivo
+        ;;separa a lista em 2, pois a primeira Ã© a data e a segunda ao motivo
         (let* ((data (first ocorrencia)) 
                 (motivo (second ocorrencia))
             )  
@@ -203,9 +203,9 @@
     )
 )
 
-;;escreve os rendimentos obtidos a partir de uma aplicação
+;;escreve os rendimentos obtidos a partir de uma aplicaÃ§Ã£o
 (defun escrita-rendimento (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a~%"
                 (cliente-nome cliente)
     )
@@ -276,10 +276,10 @@
     (setf sexo (read-line))
     (format t "~%Data de Nascimento (XX/XX/XXXX): ")
     (setf data-nascimento (read-line))
-    (format t "~%Endereço: ")
+    (format t "~%EndereÃ§o: ")
     (setf endereco (read-line))
 
-    (format t "~%Agência: ")
+    (format t "~%AgÃªncia: ")
     (setf agencia (read-line))
 
     (setf data-hoje (get-universal-time))
@@ -290,7 +290,7 @@
     (setf saldo 0)
 
     (if (verifica-existencia-cpf cpf)
-        (format t "~%CPF já encontrado.~%")
+        (format t "~%CPF jÃ¡ encontrado.~%")
         (progn
             ;;inicializa o historico de pagamentos, transferencias e historico da conta
             (setf historico-pagamentos nil)
@@ -329,15 +329,15 @@
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (progn
-                        (format t "~%Qual campo você deseja modificar?~%")
+                        (format t "~%Qual campo vocÃª deseja modificar?~%")
                         (format t "1 - Nome~%")
                         (format t "2 - Sobrenome~%")
                         (format t "3 - CPF~%")
                         (format t "4 - Sexo~%")
                         (format t "5 - Data de Nascimento~%")
-                        (format t "6 - Endereço~%")
+                        (format t "6 - EndereÃ§o~%")
                         (format t "7 - Retornar ao menu anterior~%")
-                        (format t "Escolha uma opção:")
+                        (format t "Escolha uma opÃ§Ã£o:")
 
                         (let ((escolha (read)))
                             (case escolha
@@ -361,16 +361,16 @@
                                     (setf (cliente-data-nascimento busca-cliente) (read-line))
                                     (adicionar-ocorrencia-historico busca-cliente "Data de Nascimento Alterado")
                                     (format t "~%Data de Nascimento alterado com sucesso!~%"))
-                                (6 (format t "~%Digite o endereço modificado: ")
+                                (6 (format t "~%Digite o endereÃ§o modificado: ")
                                     (setf (cliente-endereco busca-cliente) (read-line))
-                                    (adicionar-ocorrencia-historico busca-cliente "Endereço Alterado")
-                                    (format t "~%Endereço alterado com sucesso!~%"))
+                                    (adicionar-ocorrencia-historico busca-cliente "EndereÃ§o Alterado")
+                                    (format t "~%EndereÃ§o alterado com sucesso!~%"))
                                 (7 (gerenciamento-clientes-contas))
-                                (otherwise (format t "~%Escolha não existe. Tente novamente!~%") (atualizar-dados-cliente))
+                                (otherwise (format t "~%Escolha nÃ£o existe. Tente novamente!~%") (atualizar-dados-cliente))
                             )
                         )
                 )
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -382,7 +382,7 @@
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (escrita-dados-cliente busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -399,7 +399,7 @@
                     (escrita-dados-conta busca-cliente)
                     (adicionar-ocorrencia-historico busca-cliente "Saldo da conta foi consultado")
                 )
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -412,9 +412,9 @@
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
-                ;;se o CPF existe o historico do cliente buscado é escrito
+                ;;se o CPF existe o historico do cliente buscado Ã© escrito
                 (escrita-historico-conta busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -437,7 +437,7 @@
                         (format t "Conta Encerrada com sucesso!")
                     )
                 )
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -473,9 +473,9 @@
     )
 )
 
-;;calcula a diferença de meses da data inicial até a data final da aplicação realizada
+;;calcula a diferenÃ§a de meses da data inicial atÃ© a data final da aplicaÃ§Ã£o realizada
 (defun calcular-diferenca-meses (data-inicial data-final)
-    ;; Calcula o número de meses completos entre data-inicial e data-final
+    ;; Calcula o nÃºmero de meses completos entre data-inicial e data-final
     (let* ((diferenca-meses (- (second data-final) (second data-inicial)))
             (diferenca-anos (- (third data-final) (third data-inicial)))
             (meses (+ (* diferenca-anos 12) diferenca-meses))
@@ -485,14 +485,14 @@
     )
 )
 
-;;calcula o rendimento que a aplicação teve a partir da data inicial, data final, valor inicial e o seu rendimento
+;;calcula o rendimento que a aplicaÃ§Ã£o teve a partir da data inicial, data final, valor inicial e o seu rendimento
 (defun calcular-rendimento-aplicacoes (rendimento valor-inicial data-inicial data-final) 
     (let* ((meses (calcular-diferenca-meses data-inicial data-final))
-            ;; Calcula o valor final da aplicação após o rendimento
+            ;; Calcula o valor final da aplicaÃ§Ã£o apÃ³s o rendimento
             (valor-final (* valor-inicial (expt (+ 1 rendimento) meses)))
             )
-        ;; Retorna as informações e o valor final da aplicação
-        (format t "~%Confirmando informações recebidas: ")
+        ;; Retorna as informaÃ§Ãµes e o valor final da aplicaÃ§Ã£o
+        (format t "~%Confirmando informaÃ§Ãµes recebidas: ")
         (format t "~%Data Inicial: ~a" data-inicial)
         (format t "~%Data Final: ~a" data-final)
         (format t "~%Meses: ~a~%" meses)
@@ -500,15 +500,15 @@
     )
 )
 
-;;abre uma poupança para o cliente identificado pelo CPF com seu rendimento de 0,01
-;;o valor a ser aplicado só é aceito quando maior que o saldo disponivel na conta
+;;abre uma poupanÃ§a para o cliente identificado pelo CPF com seu rendimento de 0,01
+;;o valor a ser aplicado sÃ³ Ã© aceito quando maior que o saldo disponivel na conta
 (defun abrir-poupanca ()
     (format t "~%Digite o CPF a ser encontrado: ")
-    ;;verifica se o CPF é valido
+    ;;verifica se o CPF Ã© valido
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
-                ;;caso seja valido os dados são coletados para abrir uma poupança
+                ;;caso seja valido os dados sÃ£o coletados para abrir uma poupanÃ§a
                 (progn
                     ;;declara as variaveis
                     (let ( (tipo nil)
@@ -519,21 +519,21 @@
                             (valor-atual nil)
                     ))
 
-                    ;;coleta as informações para cada variavel
-                    (setf tipo "Poupança")
-                    (format t "~%Com qual valor você deseja iniciar: ")
+                    ;;coleta as informaÃ§Ãµes para cada variavel
+                    (setf tipo "PoupanÃ§a")
+                    (format t "~%Com qual valor vocÃª deseja iniciar: ")
                     (setf valor-inicial (parse-integer (read-line)))
                     ;;enquanto o valor for maior q o saldo da conta, o valor se da como invalido
                     (loop while (> valor-inicial (conta-saldo (cliente-conta busca-cliente)))
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja iniciar: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja iniciar: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor-inicial (parse-integer (read-line)))
                         )
                     )
-                    ;;salvando no historico de transação
-                    (adicionar-ocorrencia-historico busca-cliente "Popança Aberta")
+                    ;;salvando no historico de transaÃ§Ã£o
+                    (adicionar-ocorrencia-historico busca-cliente "PopanÃ§a Aberta")
                     ;;desconta o valor que foi iniciado do saldo da conta
                     (retirar-valor-saldo valor-inicial busca-cliente)
 
@@ -547,13 +547,13 @@
                     ;;calcula o rendimento
                     (setf valor-atual (calcular-rendimento-aplicacoes rendimento valor-inicial data-inicial-rendimento prazo-final))
 
-                    ;;Registro no histórico de aplicações do cliente
-                    (let ((motivo (format nil "Poupança aberta com valor de investimento de: ~,2f. Rendendo: ~,2f" valor-inicial valor-atual)))
+                    ;;Registro no histÃ³rico de aplicaÃ§Ãµes do cliente
+                    (let ((motivo (format nil "PoupanÃ§a aberta com valor de investimento de: ~,2f. Rendendo: ~,2f" valor-inicial valor-atual)))
                         (format t "~%Motivo: ~a" motivo)
                         (adicionar-ocorrencia-historico-aplicacoes busca-cliente motivo)
                     )
 
-                    ;;salva na estrtura de aplicações
+                    ;;salva na estrtura de aplicaÃ§Ãµes
                     (let ((nova-aplicacao (make-aplicacoes :tipo tipo
                                             :valor-inicial valor-inicial
                                             :rendimento rendimento
@@ -563,20 +563,20 @@
                         (push nova-aplicacao (conta-aplicacoes (cliente-conta busca-cliente)))
                 )
             )
-            (format t "~%CPF não cadastrado.~%")
+            (format t "~%CPF nÃ£o cadastrado.~%")
         )
     )
     )
 )
 
-;;abre um titulo de governo para o cliente identificado pelo CPF com seu rendimento de 0,02. O valor a ser aplicado só é aceito quando maior que o saldo disponivel na conta
+;;abre um titulo de governo para o cliente identificado pelo CPF com seu rendimento de 0,02. O valor a ser aplicado sÃ³ Ã© aceito quando maior que o saldo disponivel na conta
 (defun abrir-titulo-governo ()
     (format t "~%Digite o CPF a ser encontrado: ")
     ;;verifica se o CPF e valido
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
-            ;;caso seja valido os dados são coletados para abrir um titulo do governo
+            ;;caso seja valido os dados sÃ£o coletados para abrir um titulo do governo
                 (progn
                     (let ( (tipo nil)
                             (valor-inicial nil)
@@ -586,19 +586,19 @@
                             (valor-atual nil)
                     ))
 
-                    (setf tipo "Título do Governo")
-                    (format t "~%Com qual valor você deseja iniciar: ")
+                    (setf tipo "TÃ­tulo do Governo")
+                    (format t "~%Com qual valor vocÃª deseja iniciar: ")
                     (setf valor-inicial (parse-integer (read-line)))
                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                     (loop while (> valor-inicial (conta-saldo (cliente-conta busca-cliente)))
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja iniciar: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja iniciar: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor-inicial (parse-integer (read-line)))
                         )
                     )
-                    ;;salvando no historico de transação
+                    ;;salvando no historico de transaÃ§Ã£o
                     (adicionar-ocorrencia-historico busca-cliente "Titulo do Governo Aberto.")
                     ;;desconta o valor que foi iniciado do saldo da conta
                     (retirar-valor-saldo valor-inicial busca-cliente)
@@ -613,13 +613,13 @@
                     ;;calcula o rendimento
                     (setf valor-atual (calcular-rendimento-aplicacoes rendimento valor-inicial data-inicial-rendimento prazo-final))
 
-                    ;;Registro no histórico de titulo do governo do cliente
-                    (let ((motivo (format nil "Título do Governo aberto com valor de investimento de: ~,2f. Rendendo: ~,2f" valor-inicial valor-atual)))
+                    ;;Registro no histÃ³rico de titulo do governo do cliente
+                    (let ((motivo (format nil "TÃ­tulo do Governo aberto com valor de investimento de: ~,2f. Rendendo: ~,2f" valor-inicial valor-atual)))
                         (format t "~%Motivo: ~a" motivo)
                         (adicionar-ocorrencia-historico-aplicacoes busca-cliente motivo)
                     )
 
-                    ;;salva na estrtura de aplicações
+                    ;;salva na estrtura de aplicaÃ§Ãµes
                     (let ((nova-aplicacao (make-aplicacoes  :tipo tipo
                                             :valor-inicial valor-inicial
                                             :rendimento rendimento
@@ -629,20 +629,20 @@
                         (push nova-aplicacao (conta-aplicacoes (cliente-conta busca-cliente)))
                 )
             )
-            (format t "~%CPF não cadastrado.~%")
+            (format t "~%CPF nÃ£o cadastrado.~%")
         )
     )
     )
 )
 
-;;abre um fundo de investimento para o cliente identificado pelo CPF com seu rendimento de 0,03. O valor a ser aplicado só é aceito quando maior que o saldo disponivel na conta
+;;abre um fundo de investimento para o cliente identificado pelo CPF com seu rendimento de 0,03. O valor a ser aplicado sÃ³ Ã© aceito quando maior que o saldo disponivel na conta
 (defun abrir-fundo-investimento ()
     (format t "~%Digite o CPF a ser encontrado: ")
-    ;;verifica se o CPF é valido
+    ;;verifica se o CPF Ã© valido
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
-            ;;caso seja valido os dados são coletados para abrir um fundo de investimento
+            ;;caso seja valido os dados sÃ£o coletados para abrir um fundo de investimento
                 (progn
                     (let ( (tipo nil)
                             (valor-inicial nil)
@@ -653,19 +653,19 @@
                     ))
 
                     (setf tipo "Fundo de Investimento")
-                    (format t "~%Com qual valor você deseja iniciar: ")
+                    (format t "~%Com qual valor vocÃª deseja iniciar: ")
                     (setf valor-inicial (parse-integer (read-line)))
                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                     (loop while (> valor-inicial (conta-saldo (cliente-conta busca-cliente)))
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja iniciar: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja iniciar: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor-inicial (parse-integer (read-line)))
                         )
                     )
                     
-                    ;;salvando no historico de transação
+                    ;;salvando no historico de transaÃ§Ã£o
                     (adicionar-ocorrencia-historico busca-cliente "Fundo de Investimento Aberto.")
                     ;;desconta o valor que foi iniciado do saldo da conta
                     (retirar-valor-saldo valor-inicial busca-cliente)
@@ -680,13 +680,13 @@
                     ;;calcula o rendimento
                     (setf valor-atual (calcular-rendimento-aplicacoes rendimento valor-inicial data-inicial-rendimento prazo-final))
 
-                    ;;Registro no histórico de fundo de investimento do cliente
+                    ;;Registro no histÃ³rico de fundo de investimento do cliente
                     (let ((motivo (format nil "Fundo de Investimento aberto com valor de investimento de: ~,2f. Rendendo: ~,2f" valor-inicial valor-atual)))
                         (format t "~%Motivo: ~a" motivo)
                         (adicionar-ocorrencia-historico-aplicacoes busca-cliente motivo)
                     )
 
-                    ;;salva na estrtura de aplicações
+                    ;;salva na estrtura de aplicaÃ§Ãµes
                     (let ((nova-aplicacao (make-aplicacoes  :tipo tipo
                                             :valor-inicial valor-inicial
                                             :rendimento rendimento
@@ -696,7 +696,7 @@
                         (push nova-aplicacao (conta-aplicacoes (cliente-conta busca-cliente)))
                 )
             )
-            (format t "~%CPF não cadastrado.~%")
+            (format t "~%CPF nÃ£o cadastrado.~%")
         )
     )
     )
@@ -704,14 +704,14 @@
 
 (defun consultar-rendimentos ()
     (format t "~%Digite o CPF a ser encontrado: ")
-    ;;verifica se o cpf é valido
+    ;;verifica se o cpf Ã© valido
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
-                ;;se for valido escreve o rendimento das aplicações
+                ;;se for valido escreve o rendimento das aplicaÃ§Ãµes
                 (escrita-rendimento busca-cliente)
                 ;;se nao
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
             (adicionar-ocorrencia-historico-aplicacoes busca-cliente "Rendimentos consultados")
         )
@@ -721,7 +721,7 @@
 (defun resgatar-rendimentos ()
     ;;resgata todos os rendiemntos e exclui-os da consulta
     (format t "~%Digite o CPF a ser encontrado: ")
-    ;;verifica se o cpf é valido
+    ;;verifica se o cpf Ã© valido
     (let ((valor nil) (cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
@@ -730,37 +730,37 @@
                             (rendimento-total 0))
                         (dolist (aplicacao aplicacoes)
                             (let ((valor-atual (aplicacoes-valor-atual aplicacao)))
-                                ;;adiciona o valor atual da aplicação ao saldo da conta
+                                ;;adiciona o valor atual da aplicaÃ§Ã£o ao saldo da conta
                                 (setf rendimento-total (+ rendimento-total valor-atual))
                             )
                         )
                         
-                        ;;salvando no historico de transação
+                        ;;salvando no historico de transaÃ§Ã£o
                         (adicionar-ocorrencia-historico busca-cliente "Rendimentos resgatados")
                         ;; deposita o valor gerado no saldo
                         (depositar-valor-saldo rendimento-total busca-cliente)
 
-                        ;;limpa a lista de aplicações
+                        ;;limpa a lista de aplicaÃ§Ãµes
                         (setf (conta-aplicacoes (cliente-conta busca-cliente)) '())
 
                         ;; Retorna o rendimento total resgatado
                         (format t "~%Rendimento total resgatado: ~,2f~%" rendimento-total)
 
-                        ;;Registro no histórico de fundo de investimento do cliente
-                        (let ((motivo (format nil "Rendimentos de aplicações resgatados rendendo: ~,2f" valor-atual)))
+                        ;;Registro no histÃ³rico de fundo de investimento do cliente
+                        (let ((motivo (format nil "Rendimentos de aplicaÃ§Ãµes resgatados rendendo: ~,2f" valor-atual)))
                             (format t "~%Motivo: ~a" motivo)
                             (adicionar-ocorrencia-historico-aplicacoes busca-cliente motivo)
                         )
                     )
                 )
                 ;;se nao
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
 )
 
-;;adiciona 1 ocorrencia de movimentacao no historico de aplicações do cliente,, dizendo o motivo
+;;adiciona 1 ocorrencia de movimentacao no historico de aplicaÃ§Ãµes do cliente,, dizendo o motivo
 (defun adicionar-ocorrencia-historico-aplicacoes (cliente motivo)
     (let* ((historico-aplicacao (conta-historico-aplicacoes (cliente-conta cliente)))
             ;;capta a data atual do computador
@@ -796,67 +796,67 @@
 ;;realiza uma transferencias entre 2 contas existentes no banco de dados
 (defun tranferencia-entre-contas ()
     (format t "~%Digite o CPF de origem a ser encontrado: ")
-    ;;verifica se o cpf é valido
+    ;;verifica se o cpf Ã© valido
     (let ((valor nil) (cpf-busca (read-line)))
         (let ((busca-cliente-origem (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente-origem 
                 (progn
                     (format t "~%Digite o CPF de destino a ser encontrado: ")
-                    ;;verifica se o cpf é valido
+                    ;;verifica se o cpf Ã© valido
                     (let ((cpf-busca-segundaria (read-line)))
                         (let ((busca-cliente-destino (verifica-existencia-cpf cpf-busca-segundaria)))
                             (if busca-cliente-destino
                                 ;;se for valido verifica os valores do rendimento
                                 (progn
-                                    (format t "~%Qual valor você deseja tranferir: ")
+                                    (format t "~%Qual valor vocÃª deseja tranferir: ")
                                     (setf valor (parse-integer (read-line)))
                                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                                     (loop while (> valor (conta-saldo (cliente-conta busca-cliente-origem)))
                                         do (progn 
-                                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                                            (format t "~%Com qual valor você deseja transferir: ")
+                                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                                            (format t "~%Com qual valor vocÃª deseja transferir: ")
                                             ;;parse-integer transforma a string em numero
                                             (setf valor (parse-integer (read-line)))
                                         )
                                     )
                                     ;;salvando no historico da conta
-                                    (adicionar-ocorrencia-historico busca-cliente-origem "Transferência realizada")
+                                    (adicionar-ocorrencia-historico busca-cliente-origem "TransferÃªncia realizada")
 
                                     (tranferir-valor-entre-contas busca-cliente-origem busca-cliente-destino valor)
-                                    (format t "~%Tranferência realizada com sucesso~%")
+                                    (format t "~%TranferÃªncia realizada com sucesso~%")
 
-                                    ;;Registro no histórico do cliente de origem
-                                    (let ((motivo (format nil "Transferência no valor de ~a para CPF ~a" valor (cliente-cpf busca-cliente-destino))))
+                                    ;;Registro no histÃ³rico do cliente de origem
+                                    (let ((motivo (format nil "TransferÃªncia no valor de ~a para CPF ~a" valor (cliente-cpf busca-cliente-destino))))
                                         (format t "~%Motivo: ~a" motivo)
                                         (adicionar-ocorrencia-historico-transferencia busca-cliente-origem motivo)
                                     )
 
-                                    ;;Registro no histórico do cliente de destino
+                                    ;;Registro no histÃ³rico do cliente de destino
                                     (let ((motivo (format nil "Recebido de CPF: ~a o valor de ~a" (cliente-cpf busca-cliente-origem) valor)))
                                         (adicionar-ocorrencia-historico-transferencia busca-cliente-destino motivo)
                                     )
                                 )
                                 ;;se nao
-                                (format t "~%CPF não cadastrado.~%")
+                                (format t "~%CPF nÃ£o cadastrado.~%")
                             )
                             )
                         )
                     )
                     ;;se nao
-                    (format t "~%CPF não cadastrado.~%")
+                    (format t "~%CPF nÃ£o cadastrado.~%")
                 )
             )
         )
 )
 
-;;escreve o histórico de transferencias 
+;;escreve o histÃ³rico de transferencias 
 (defun escrita-historico-transferencia (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a~%"
                 (cliente-nome cliente)
     )
     (dolist (ocorrencia (conta-historico-transferencias (cliente-conta cliente)))
-        ;;separa a lista em 2, pois a primeira é a data e a segunda ao motivo
+        ;;separa a lista em 2, pois a primeira Ã© a data e a segunda ao motivo
         (let* ((data (first ocorrencia)) 
                 (motivo (second ocorrencia))
             )  
@@ -867,14 +867,14 @@
     )
 )
 
-;;verifica se o cpf é valido e chama a função para escrever o histórico de transferências
+;;verifica se o cpf Ã© valido e chama a funÃ§Ã£o para escrever o histÃ³rico de transferÃªncias
 (defun historico-transferencia ()
     (format t "~%Digite o CPF a ser encontrado: ")
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (escrita-historico-transferencia busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -900,15 +900,15 @@
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (progn
-                    (format t "~%Para quem você deseja realizar o pagamento: ")
+                    (format t "~%Para quem vocÃª deseja realizar o pagamento: ")
                     (setf destinatario (read-line))
-                    (format t "~%Qual valor você deseja pagar: ")
+                    (format t "~%Qual valor vocÃª deseja pagar: ")
                     (setf valor (parse-integer (read-line)))
                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                     (loop while (> valor (conta-saldo (cliente-conta busca-cliente)))
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja transferir: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja transferir: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor (parse-integer (read-line)))
                         )
@@ -920,28 +920,28 @@
                     (retirar-valor-saldo valor busca-cliente)
                     (format t "~%Pagamento realizada com sucesso para ~a~%" destinatario)
 
-                    ;;Registro no histórico de pagamento cliente de destino
+                    ;;Registro no histÃ³rico de pagamento cliente de destino
                     (let ((motivo (format nil "Pagamento no valor de ~a para: ~a" valor destinatario)))
                         (adicionar-ocorrencia-historico-pagamentos busca-cliente motivo)
                     )
                 )
                 ;;se nao
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
 )
 
-;;escreve o histórico de pagamentos
+;;escreve o histÃ³rico de pagamentos
 (defun escrita-historico-pagamentos (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a
                 Agencia: ~a~%"
                 (cliente-nome cliente)
                 (conta-agencia (cliente-conta cliente))
     )
     (dolist (ocorrencia (conta-historico-pagamentos (cliente-conta cliente)))
-        ;;separa a lista em 2, pois a primeira é a data e a segunda ao motivo
+        ;;separa a lista em 2, pois a primeira Ã© a data e a segunda ao motivo
         (let* ((data (first ocorrencia)) 
                 (motivo (second ocorrencia))
             )  
@@ -952,14 +952,14 @@
     )
 )
 
-;;verifica se o cpf é valido e chama a função para escrever o histórico de pagamentos
+;;verifica se o cpf Ã© valido e chama a funÃ§Ã£o para escrever o histÃ³rico de pagamentos
 (defun historico-pagamento ()
     (format t "~%Digite o CPF a ser encontrado: ")
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (escrita-historico-pagamentos busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -988,13 +988,13 @@
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (progn
-                    (format t "~%Qual valor você deseja sacar: ")
+                    (format t "~%Qual valor vocÃª deseja sacar: ")
                     (setf valor (parse-integer (read-line)))
                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                     (loop while (> valor (limite-de-saque (conta-saldo (cliente-conta busca-cliente))))
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja transferir: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja transferir: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor (parse-integer (read-line)))
                         )
@@ -1007,26 +1007,26 @@
                     (retirar-valor-saldo valor busca-cliente)
                     (format t "~%Saque realizada com sucesso para ~a~%" (cliente-nome busca-cliente))
 
-                    ;;Registro no histórico de pagamento cliente de destino
+                    ;;Registro no histÃ³rico de pagamento cliente de destino
                     (let ((motivo (format nil "Saque no valor de ~a." valor)))
                         (adicionar-ocorrencia-historico-saque busca-cliente motivo)
                     )
                 )
                 ;;se nao
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
 )
 
-;;escreve o histórico de saques
+;;escreve o histÃ³rico de saques
 (defun escrita-historico-saque (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a~%"
                 (cliente-nome cliente)
     )
     (dolist (ocorrencia (conta-historico-saque (cliente-conta cliente)))
-        ;;separa a lista em 2, pois a primeira é a data e a segunda ao motivo
+        ;;separa a lista em 2, pois a primeira Ã© a data e a segunda ao motivo
         (let* ((data (first ocorrencia)) 
                 (motivo (second ocorrencia))
             )  
@@ -1037,14 +1037,14 @@
     )
 )
 
-;;verifica se o cpf é valido e chama a função para escrever o histórico de saques
+;;verifica se o cpf Ã© valido e chama a funÃ§Ã£o para escrever o histÃ³rico de saques
 (defun historico-saque ()
     (format t "~%Digite o CPF a ser encontrado: ")
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (escrita-historico-saque busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
@@ -1069,45 +1069,45 @@
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (progn
-                    (format t "~%Qual valor você deseja depositar: ")
+                    (format t "~%Qual valor vocÃª deseja depositar: ")
                     (setf valor (parse-integer (read-line)))
                     ;;caso o valor seja menor que o do saldo ele pergunta um novo valor
                     (loop while (< valor 0.01)
                         do (progn 
-                            (format t "~%Valor inválido. O valor não pode ser maior que o saldo da conta.")
-                            (format t "~%Com qual valor você deseja transferir: ")
+                            (format t "~%Valor invÃ¡lido. O valor nÃ£o pode ser maior que o saldo da conta.")
+                            (format t "~%Com qual valor vocÃª deseja transferir: ")
                             ;;parse-integer transforma a string em numero
                             (setf valor (parse-integer (read-line)))
                         )
                     )
 
                     ;;salvando no historico da conta
-                    (adicionar-ocorrencia-historico busca-cliente "Depósito realizado")
+                    (adicionar-ocorrencia-historico busca-cliente "DepÃ³sito realizado")
 
                     ;;adicionar o valor para a conta de origem
                     (depositar-valor-saldo valor busca-cliente)
-                    (format t "~%Depósito realizada com sucesso para ~a~%" (cliente-nome busca-cliente))
+                    (format t "~%DepÃ³sito realizada com sucesso para ~a~%" (cliente-nome busca-cliente))
 
-                    ;;Registro no histórico de pagamento cliente de destino
-                    (let ((motivo (format nil "Depósito no valor de ~a." valor)))
+                    ;;Registro no histÃ³rico de pagamento cliente de destino
+                    (let ((motivo (format nil "DepÃ³sito no valor de ~a." valor)))
                         (adicionar-ocorrencia-historico-deposito busca-cliente motivo)
                     )
                 )
                 ;;se nao
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
 )
 
-;;escreve o histórico de depositos
+;;escreve o histÃ³rico de depositos
 (defun escrita-historico-deposito (cliente)
-    (format t "~%Histórico da conta:
+    (format t "~%HistÃ³rico da conta:
                 Cliente: ~a~%"
                 (cliente-nome cliente)
     )
     (dolist (ocorrencia (conta-historico-deposito (cliente-conta cliente)))
-        ;;separa a lista em 2, pois a primeira é a data e a segunda ao motivo
+        ;;separa a lista em 2, pois a primeira Ã© a data e a segunda ao motivo
         (let* ((data (first ocorrencia)) 
                 (motivo (second ocorrencia))
             )  
@@ -1118,20 +1118,20 @@
     )
 )
 
-;;verifica se o cpf é valido e chama a função para escrever o histórico de depositos
+;;verifica se o cpf Ã© valido e chama a funÃ§Ã£o para escrever o histÃ³rico de depositos
 (defun historico-deposito ()
     (format t "~%Digite o CPF a ser encontrado: ")
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
                 (escrita-historico-deposito busca-cliente)
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
     )
 )
 
-;;função que gera o relatorio de transferencia para arquivo CSV
+;;funÃ§Ã£o que gera o relatorio de transferencia para arquivo CSV
 (defun gerar-relatorio-transferencia (cliente)
     (let ((historico-transferencias (conta-historico-transferencias (cliente-conta cliente)))
         (arquivo (format nil "relatorio-transferencias-~a.csv" (cliente-cpf cliente))))
@@ -1139,24 +1139,24 @@
                                 :direction :output
                                 :if-exists :supersede
                                 :if-does-not-exist :create)
-            (format stream "RELATÓRIO DE TRANSFERÊNCIAS~%~%")
+            (format stream "RELATÃ“RIO DE TRANSFERÃŠNCIAS~%~%")
             (format stream "Data,Motivo~%")
-            ;;le a lista de trsnferencias até que ache o final dela, separando pelo motivo e a data
+            ;;le a lista de trsnferencias atÃ© que ache o final dela, separando pelo motivo e a data
             (dolist (transferencia historico-transferencias)
                 (let ((data (first transferencia))
                     (motivo (second transferencia)))
-                    ;;formato que irá aparecer no arquivo
+                    ;;formato que irÃ¡ aparecer no arquivo
                     (format stream "~a,~a~%" data motivo)
                 )
             )
         )
     )
-    (format t "Relatório de transferências gerado com sucesso!~%")
-    (adicionar-ocorrencia-historico cliente "Relatório de Transferências gerado com sucesso!")
+    (format t "RelatÃ³rio de transferÃªncias gerado com sucesso!~%")
+    (adicionar-ocorrencia-historico cliente "RelatÃ³rio de TransferÃªncias gerado com sucesso!")
     (logar)
 )
 
-;;função que gera o relatorio de pagamento para arquivo CSV
+;;funÃ§Ã£o que gera o relatorio de pagamento para arquivo CSV
 (defun gerar-relatorio-pagamento (cliente)
     (let ((historico-pagamentos (conta-historico-pagamentos (cliente-conta cliente)))
         (arquivo (format nil "relatorio-pagamentos-~a.csv" (cliente-cpf cliente))))
@@ -1164,24 +1164,24 @@
                                 :direction :output
                                 :if-exists :supersede
                                 :if-does-not-exist :create)
-            (format stream "RELATÓRIO DE PAGAMENTOS~%~%")
+            (format stream "RELATÃ“RIO DE PAGAMENTOS~%~%")
             (format stream "Data,Motivo~%")
-            ;;le a lista de trsnferencias até que ache o final dela, separando pelo motivo e a data
+            ;;le a lista de trsnferencias atÃ© que ache o final dela, separando pelo motivo e a data
             (dolist (pagamento historico-pagamentos)
                 (let ((data (first pagamento))
                     (motivo (second pagamento)))
-                    ;;formato que irá aparecer no arquivo
+                    ;;formato que irÃ¡ aparecer no arquivo
                     (format stream "~a,~a~%" data motivo)
                 )
             )
         )
     )
-    (format t "Relatório de pagamentos gerado com sucesso!~%")
-    (adicionar-ocorrencia-historico cliente "Relatório de Pagamentos gerado com sucesso!")
+    (format t "RelatÃ³rio de pagamentos gerado com sucesso!~%")
+    (adicionar-ocorrencia-historico cliente "RelatÃ³rio de Pagamentos gerado com sucesso!")
     (logar)
 )
 
-;;função que gera o relatorio de aplicações para arquivo CSV
+;;funÃ§Ã£o que gera o relatorio de aplicaÃ§Ãµes para arquivo CSV
 (defun gerar-relatorio-aplicacoes (cliente)
     (let ((historico-aplicacoes (conta-historico-aplicacoes (cliente-conta cliente)))
         (arquivo (format nil "relatorio-aplicacoes-~a.csv" (cliente-cpf cliente))))
@@ -1189,20 +1189,20 @@
                                 :direction :output
                                 :if-exists :supersede
                                 :if-does-not-exist :create)
-            (format stream "RELATÓRIO DE APLICAÇÕES~%~%")
+            (format stream "RELATÃ“RIO DE APLICAÃ‡Ã•ES~%~%")
             (format stream "Data,Motivo~%")
-            ;;le a lista de trsnferencias até que ache o final dela, separando pelo motivo e a data
+            ;;le a lista de trsnferencias atÃ© que ache o final dela, separando pelo motivo e a data
             (dolist (aplicacao historico-aplicacoes)
                 (let ((data (first aplicacao))
                     (motivo (second aplicacao)))
-                    ;;formato que irá aparecer no arquivo
+                    ;;formato que irÃ¡ aparecer no arquivo
                     (format stream "~a,~a~%" data motivo)
                 )
             )
         )
     )
-    (format t "Relatório de aplicacoes gerado com sucesso!~%")
-    (adicionar-ocorrencia-historico cliente "Relatório de Aplicacoes gerado com sucesso!")
+    (format t "RelatÃ³rio de aplicacoes gerado com sucesso!~%")
+    (adicionar-ocorrencia-historico cliente "RelatÃ³rio de Aplicacoes gerado com sucesso!")
     (logar)
 )
 
@@ -1211,15 +1211,15 @@
         (lista-de-clientes *clientes*))
         ;;calcula o total de novos clientes
         (let* ((total-clientes (length lista-de-clientes)))
-        ;;calcula o total de transações
+        ;;calcula o total de transaÃ§Ãµes
             (let ((total-transferencias (count-if #'(lambda (cliente)
                                                     (> (length (conta-historico-transferencias (cliente-conta cliente))) 0))
                                                 lista-de-clientes)))
-                ;;calcula o total de depósitos
+                ;;calcula o total de depÃ³sitos
                 (let ((total-deposito (count-if #'(lambda (cliente)
                                                     (> (length (conta-historico-deposito (cliente-conta cliente))) 0))
                                                 lista-de-clientes)))
-                    ;;calcula o total de aplicações
+                    ;;calcula o total de aplicaÃ§Ãµes
                     (let ((total-aplicacoes (count-if #'(lambda (cliente)
                                                             (> (length (conta-aplicacoes (cliente-conta cliente))) 0))
                                                         lista-de-clientes)))
@@ -1228,24 +1228,24 @@
                                                 :direction :output
                                                 :if-exists :supersede
                                                 :if-does-not-exist :create)
-                        (format stream "RELATÓRIO DE DESEMPENHO DA AGÊNCIA~%~%")
-                        (format stream "Métrica,Total~%")
-                        (format stream "Total de Transferências,~a~%" total-transferencias)
+                        (format stream "RELATÃ“RIO DE DESEMPENHO DA AGÃŠNCIA~%~%")
+                        (format stream "MÃ©trica,Total~%")
+                        (format stream "Total de TransferÃªncias,~a~%" total-transferencias)
                         (format stream "Total de Novos Clientes,~a~%" total-clientes)
-                        (format stream "Total de Depósitos,~a~%" total-deposito)
-                        (format stream "Total de Aplicações,~a~%" total-aplicacoes))
+                        (format stream "Total de DepÃ³sitos,~a~%" total-deposito)
+                        (format stream "Total de AplicaÃ§Ãµes,~a~%" total-aplicacoes))
                     )
                 )
             )
         )
     )
-    (format t "~%Relatório de desempenho da agência gerado com sucesso!~%")
+    (format t "~%RelatÃ³rio de desempenho da agÃªncia gerado com sucesso!~%")
     (gerenciamento-relatorios-gerais)
 )
 
-;;função para buscar o cliente e gerar o relatório CSV
+;;funÃ§Ã£o para buscar o cliente e gerar o relatÃ³rio CSV
 (defun gerar-relatorios (escolha)
-    (format t "~%Digite o CPF do cliente para gerar o relatório de transferências: ")
+    (format t "~%Digite o CPF do cliente para gerar o relatÃ³rio de transferÃªncias: ")
     (let ((cpf-busca (read-line)))
         (let ((busca-cliente (verifica-existencia-cpf cpf-busca)))
             (if busca-cliente
@@ -1255,12 +1255,12 @@
                             (1 (gerar-relatorio-transferencia busca-cliente))
                             (2 (gerar-relatorio-pagamento busca-cliente))
                             (3 (gerar-relatorio-aplicacoes busca-cliente))
-                            (otherwise (format t "Escolha não existe. Tente novamente!"))
+                            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
                         )
                     )
                 )
                 )
-                (format t "~%CPF não cadastrado.~%")
+                (format t "~%CPF nÃ£o cadastrado.~%")
             )
         )
 )
@@ -1273,13 +1273,13 @@
         (menu-gerenciamento-relatorios-gerais)
         (let ((escolha (read)))
         (case escolha
-            ;;chama a função gerar-relatorios com a numeração para verificar o cpf do cliente que o usuario deseja gerar o relatorio CSV
+            ;;chama a funÃ§Ã£o gerar-relatorios com a numeraÃ§Ã£o para verificar o cpf do cliente que o usuario deseja gerar o relatorio CSV
             (1 (gerar-relatorios 1))
             (2 (gerar-relatorios 2))
             (3 (gerar-relatorios 3))
             (4 (gerar-relatorio-desempenho))
             (5 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
@@ -1296,7 +1296,7 @@
             (3 (realizar-deposito))
             (4 (historico-deposito))
             (5 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
@@ -1311,7 +1311,7 @@
             (1 (pagar-conta))
             (2 (historico-pagamento))
             (3 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
@@ -1326,14 +1326,14 @@
             (1 (tranferencia-entre-contas))
             (2 (historico-transferencia))
             (3 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
 )
 
 (defun gerenciamento-aplicacoes ()
-    ;;gereciamento do menu de aplicações
+    ;;gereciamento do menu de aplicaÃ§Ãµes
     (loop
         (menu-gerenciamento-aplicacoes)
         (let ((escolha (read)))
@@ -1344,7 +1344,7 @@
             (4 (consultar-rendimentos))
             (5 (resgatar-rendimentos))
             (6 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
@@ -1363,7 +1363,7 @@
             (5 (consultar-historico-conta))
             (6 (encerrar-conta))
             (7 (logar))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
@@ -1382,7 +1382,7 @@
             (5 (gerenciamento-saque-deposito))
             (6 (gerenciamento-relatorios-gerais))
             (7 (format t "Obrigado por visitar nosso sistema!") (exit))
-            (otherwise (format t "Escolha não existe. Tente novamente!"))
+            (otherwise (format t "Escolha nÃ£o existe. Tente novamente!"))
         )
         )
     )
